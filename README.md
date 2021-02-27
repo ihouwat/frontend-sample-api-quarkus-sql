@@ -1,4 +1,5 @@
-# FrontendSampleApiQuarkusSql
+# Frontend for sample-api-quarkus-sql
+[See backend repo](https://github.com/ihouwat/sample-api-quarkus-sql)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
