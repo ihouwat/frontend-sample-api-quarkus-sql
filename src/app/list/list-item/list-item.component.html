@@ -1,0 +1,9 @@
+<input value="Add an item"/>
+
+<ul class="list">
+  <li *ngFor="let item of items">
+    <input [value]="item.item" class="list-item" [id]="item.id"/>
+  </li>
+</ul>
+
+
