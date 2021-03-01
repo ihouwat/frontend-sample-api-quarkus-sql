@@ -1,5 +1,5 @@
 # Frontend for sample-api-quarkus-sql
-Frontend app to test a Java RESTful API. Implements basic CRUD operations. 
+Frontend app to test a Java RESTful API. API implements basic CRUD operations for a to-do list. 
 
 ## How it works
 1. Start the server and database first. [See backend repo](https://github.com/ihouwat/sample-api-quarkus-sql).
