@@ -1,4 +1,4 @@
-# Frontend for sample-api-quarkus-sql
+# Frontend for To-Do list API w/Quarkus and SQL
 Frontend app to test a Java RESTful API. API implements basic CRUD operations for a to-do list. 
 
 ## How it works
