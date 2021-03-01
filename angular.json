@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -87,7 +87,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -120,5 +120,11 @@
       }
     }
   },
-  "defaultProject": "frontend-sample-api-quarkus-sql"
+  "defaultProject": "frontend-sample-api-quarkus-sql",
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss",
+      "styleext": "scss"
+    }
+  }
 }
