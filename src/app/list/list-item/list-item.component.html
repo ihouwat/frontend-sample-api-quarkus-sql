@@ -1,8 +1,20 @@
-<input value="Add an item"/>
+<input 
+  #box
+  class="searchBox" 
+  type="text"
+  value="Add item & press Enter"
+  (keyup.enter)="addOnEnter(box.value)" 
+  (click)="box.value=''"/>
 
 <ul class="list">
   <li *ngFor="let item of items">
-    <input [value]="item.item" class="list-item" [id]="item.id"/>
+    <input 
+      #inputUpdateVal
+      [value]="item.item"
+      class="list-item" 
+      [id]="item.id"/>
+    <button (click)="delete(item)">Delete</button>
+    <button (click)="update(inputUpdateVal.value, item)">Update</button>
   </li>
 </ul>
 
