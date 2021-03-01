@@ -1,21 +1,44 @@
-<input 
-  #box
-  class="searchBox" 
-  type="text"
-  value="Add item & press Enter"
-  (keyup.enter)="addOnEnter(box.value)" 
-  (click)="box.value=''"/>
+<ibm-label>
+  <input
+    ibmText
+    theme="dark"
+    #box
+    class="searchBox" 
+    type="text"
+    value="Add item & press Enter"
+    (keyup.enter)="addOnEnter(box.value)" 
+    (click)="box.value=''"/>
+</ibm-label>
 
-<ul class="list">
-  <li *ngFor="let item of items">
+<div *ngFor="let item of items" class="list-item">
+  <ibm-label>
     <input 
       #inputUpdateVal
+      ibmText
+      theme="light"
+      size="md"
       [value]="item.item"
-      class="list-item" 
       [id]="item.id"/>
-    <button (click)="delete(item)">Delete</button>
-    <button (click)="update(inputUpdateVal.value, item)">Update</button>
-  </li>
-</ul>
+  </ibm-label>
+  <button 
+    (click)="delete(item)" 
+    ibmButton="danger" 
+    size="field"
+    [iconOnly]="true"
+    [hasAssistiveText]="true">
+    <svg class="bx--btn__icon" ibmIconTrashCan size="20"></svg>
+    <span class="bx--assistive-text">Delete item</span>
+  </button>
+
+  <button 
+    (click)="update(inputUpdateVal.value, item)" 
+    ibmButton="primary"
+    size="field"
+    [iconOnly]="true"
+    [hasAssistiveText]="true">
+    <svg class="bx--btn__icon" ibmIconEdit size="20"></svg>
+    <span class="bx--assistive-text">Update field then click</span>
+  </button>
+</div>
 
 

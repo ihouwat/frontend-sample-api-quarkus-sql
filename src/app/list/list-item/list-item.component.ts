@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ListService } from '../list.service';
 import { ListItem } from '../../model/listItem';
 
-
 @Component({
 	selector: 'list-item',
 	templateUrl: './list-item.component.html',
@@ -17,7 +16,7 @@ export class ListItemComponent implements OnInit {
 
 	getListItems(): void {
 		this.listService.getItems()
-			.subscribe(items => this.items = items);
+      .subscribe(items => this.items = items);
 	}
 
 	addOnEnter(value: string) {
@@ -42,7 +41,7 @@ export class ListItemComponent implements OnInit {
 				this.items.forEach(i => {
 					if (i.id === res.id) { i.item = res.item; } // update items view
 				});
-			});
+      });
 		}
 	}
 

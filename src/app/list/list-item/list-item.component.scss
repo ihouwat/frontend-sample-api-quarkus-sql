@@ -1,11 +1,9 @@
-input {
-  margin: 4px 0;
-}
-
 button { 
-  margin-left: 6px;
+  margin-left: 8px;
 }
 
-.searchBox {
-  width: 100%;
+.list-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
 }
